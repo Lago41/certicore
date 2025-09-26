@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Enterprise Solutions | CertiCore</title>
+    <link rel="icon" type="image/png" href="publics/images/Untitled (40 x 40 px).png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="publics/styles/style.css">
+</head>
+<body>
+
+<!-- ======================== Header ======================== -->
+<!-- Reusing the exact same header for consistency -->
+<!-- ======================== Header (Corrected) ======================== -->
+<header>
+    <a href="index.html" style="text-decoration: none;"><h1 class="logo">CertiCore</h1></a>
+
+    <!-- Desktop Navigation (now properly grouped) -->
+    <nav class="main-nav">
+        <ul class="nav_links">
+            <li><a href="certification.html">Certifications</a></li>
+            <li><a href="enterprise.html">Enterprise</a></li>
+            <li><a href="governmant.html">Government</a></li>
+            <li><a href="#">Partner</a></li>
+            <li><a href="#">Academic</a></li>
+            <li><a href="#">Resources</a></li>
+        </ul>
+    </nav>
+    <a class="cta desktop-cta" href="#"><button>Login</button></a>
+
+    <!-- Mobile Navigation Elements (now distinctly separate) -->
+    <button class="hamburger-menu" aria-label="Open navigation menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </button>
+    <div class="mobile-nav">
+        <a href="certification.html">Certifications</a>
+        <a href="enterprise.html">Enterprise</a>
+        <a href="governmant.html">Government</a>
+        <a href="#">Partner</a>
+        <a href="#">Academic</a>
+        <a href="#">Resources</a>
+        <a class="cta mobile-cta" href="#"><button>Login</button></a>
+    </div>
+</header>
+
+<!-- ======================== Enterprise Hero Section ======================== -->
+<main class="enterprise-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 style="color: rgb(255, 8, 8);">Empower Your Workforce for Tomorrow</h1>
+        <p class="lead">
+            Bridge skills gaps and build a future-proof team with CertiCore's comprehensive training and certification solutions, tailored for your business objectives.
+        </p>
+        <div class="hero-ctas">
+            <a class="btn primary" href="#">Request a Consultation</a>
+            <a class="btn ghost" href="#solutions">Explore Solutions</a>
+        </div>
+    </div>
+</main>
+
+<!-- ======================== Trusted By Section ======================== -->
+<section class="trusted-by">
+    <div class="container">
+        <h3 class="section-subtitle">TRUSTED BY LEADING GLOBAL COMPANIES</h3>
+        <div class="client-logos">
+            <!-- Replace with actual client logos -->
+            <img src="data:image/png;base64,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" alt="Client Logo 1">
+            <img src="https://blogs.microsoft.com/wp-content/uploads/2012/08/8867.Microsoft_5F00_Logo_2D00_for_2D00_screen.jpg" alt="Client Logo 3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqHxfp5_IxQLcw1D8CVTi6ouBWcTy2m6sxHw&s" alt="Client Logo 4">
+            <img src="https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png" alt="Client Logo 5">
+        </div>
+    </div>
+</section>
+
+<!-- ======================== Our Solutions Section ======================== -->
+<section id="solutions" class="solutions-section">
+    <div class="container">
+        <h2 class="section-title">Comprehensive Solutions for Your Business</h2>
+        <div class="solutions-grid">
+            <!-- Solution 1 -->
+            <div class="feature-card">
+                <h3>Targeted Training</h3>
+                <p>Custom learning paths designed to address your team's specific skill requirements and business goals.</p>
+            </div>
+            <!-- Solution 2 -->
+            <div class="feature-card">
+                <h3>Certification Pathways</h3>
+                <p>Validate your team's expertise with globally recognized certifications that demonstrate mastery and competence.</p>
+            </div>
+            <!-- Solution 3 -->
+            <div class="feature-card">
+                <h3>Performance Analytics</h3>
+                <p>Track progress, measure ROI, and identify areas for growth with our powerful analytics dashboard.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======================== Stats Banner Section ======================== -->
+<section class="stats-banner">
+    <div class="container">
+        <div class="stat-item">
+            <span class="stat-number">95%</span>
+            <span class="stat-label">Certification Success Rate</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Corporate Partners Worldwide</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">2M+</span>
+            <span class="stat-label">Exams Delivered Globally</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Customizable Learning Paths</span>
+        </div>
+    </div>
+</section>
+
+<!-- ======================== CTA Banner Section ======================== -->
+<section class="cta-banner">
+    <h2>Ready to Elevate Your Team's Skills?</h2>
+    <p>Let's build a skilled workforce together. Contact our enterprise team to get started.</p>
+    <a href="#" class="btn primary">Request a Consultation</a>
+</section>
+
+
+<!-- ======================== Footer ======================== -->
+<!-- Reusing the exact same footer for consistency -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-col brand-col">
+            <h3 class="logo-footer">CertiCore</h3>
+            <p class="mission">Unlock your potential with industry-recognized certifications and world-class tech training designed for the future.</p>
+        </div>
+        <div class="footer-col links-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer-col links-col">
+            <h4>Certifications</h4>
+            <ul>
+                <li><a href="#">All Certifications</a></li>
+                <li><a href="#">Cyber Security</a></li>
+                <li><a href="#">Cloud Computing</a></li>
+                <li><a href="#">Artificial Intelligence</a></li>
+            </ul>
+        </div>
+        <div class="footer-col links-col">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="help-center.html">Help Center</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 CertiCore. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" title="Facebook" aria-label="Facebook">FB</a>
+            <a href="#" title="Twitter" aria-label="Twitter">TW</a>
+            <a href="#" title="LinkedIn" aria-label="LinkedIn">IN</a>
+            <a href="#" title="YouTube" aria-label="YouTube">YT</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Global JS -->
+<script src="publics/js/global.js" defer></script>
+
+</body>
+</html>

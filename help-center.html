@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Help Center - CertiCore</title>
+    <link rel="icon" type="image/png" href="publics/images/Untitled (40 x 40 px).png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="publics/styles/style.css">
+</head>
+<body>
+
+    <!-- ======================== Header (Consistent Across Site) ======================== -->
+    <header>
+        <a href="index.html" style="text-decoration: none;"><h1 class="logo">CertiCore</h1></a>
+        <!-- Desktop Navigation -->
+        <nav class="main-nav">
+            <ul class="nav_links">
+                <li><a href="certification.html">Certifications</a></li>
+                <li><a href="enterprise.html">Enterprise</a></li>
+                <li><a href="government.html">Government</a></li>
+                <li><a href="#">Partner</a></li>
+                <li><a href="help-center.html">Help Center</a></li>
+            </ul>
+        </nav>
+        <a class="cta desktop-cta" href="#"><button>Login</button></a>
+        <!-- Mobile Navigation Elements -->
+        <button class="hamburger-menu" aria-label="Open navigation menu">
+            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        </button>
+        <div class="mobile-nav">
+            <a href="certification.html">Certifications</a>
+            <a href="enterprise.html">Enterprise</a>
+            <a href="government.html">Government</a>
+            <a href="#">Partner</a>
+            <a href="help-center.html">Help Center</a>
+            <a class="cta mobile-cta" href="#"><button>Login</button></a>
+        </div>
+    </header>
+
+    <!-- ======================== Main Content ======================== -->
+    <main>
+        <!-- Section 1: Hero -->
+        <section class="page-hero short-hero" style="background-image: url(//wp.sfdcdigital.com/en-ca/wp-content/uploads/sites/8/2024/07/what-is-call-center.jpg?w=1024);">
+            <div class="hero-overlay"></div>
+            <div class="hero-content text-center">
+                <h1 class="hero-title">Help & Support</h1>
+                <p class="hero-subtitle">How can we help you today?</p>
+                
+                <!-- Search Bar -->
+                <div class="search-bar-container">
+                    <input type="search" id="faq-search" placeholder="Search for questions (e.g., 'refund')">
+                    <button aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: FAQ Categories -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Browse Topics</h2>
+                <div class="faq-categories">
+                    <a href="#" class="category-card">
+                        <div class="solution-icon"> <!-- Reusing styles -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 12q-.425 0-.713-.288T11 11V5q0-.425.288-.713T12 4t.713.288T13 5v6q0 .425-.288.713T12 12m0 5.5q-.65 0-1.075-.425T10.5 16q0-.65.425-1.075T12 14.5t1.075.425T13.5 16q0 .65-.425 1.075T12 17.5M5 21q-.825 0-1.413-.588T3 19V5q0-.825.588-1.413T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.588 1.413T19 21z"/></svg>
+                        </div>
+                        <h4>Getting Started</h4>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="solution-icon">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 8H4V6h16zm0 2H4v6h16zm-2-6H6v2h12zm4 8H2v2h20zm-3-4H5v2h16zM4 18h16v-2H4z"/></svg>
+                        </div>
+                        <h4>Billing & Subscriptions</h4>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="solution-icon">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2m-6 2c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0 16c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5m0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3"/></svg>
+                        </div>
+                        <h4>Certifications & Exams</h4>
+                    </a>
+                </div>
+
+                <!-- FAQ List -->
+                <h2 class="section-title" style="margin-top: 60px;">Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>What is the refund policy?</summary>
+                        <p>Our refund policy allows for a full refund within 14 days of purchase, provided that you have not accessed more than 20% of the course material or attempted any certification exams.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How do I reset my password?</summary>
+                        <p>You can reset your password by clicking the "Login" button, then selecting the "Forgot Password" link. An email with instructions will be sent to your registered address.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Are CertiCore certifications recognized by employers?</summary>
+                        <p>Yes, all CertiCore certifications are vendor-neutral and globally recognized. They are designed in collaboration with industry experts to validate the most in-demand tech skills.</p>
+                    </details>
+                     <details class="faq-item">
+                        <summary>How long do I have access to course materials?</summary>
+                        <p>Upon purchase, you receive lifetime access to all video lectures and downloadable resources for the course you enrolled in. You can learn at your own pace and revisit the material anytime.</p>
+                    </details>
+                </div>
+
+                <!-- Still need help? -->
+                <div class="still-need-help">
+                    <h3>Still need help?</h3>
+                    <p>If you can't find the answer you're looking for, please don't hesitate to reach out to our support team.</p>
+                    <a href="contact.html" class="btn primary">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ======================== Footer (Consistent Across Site) ======================== -->
+    <footer>
+         <div class="footer-container">
+        <!-- Column 1: Brand and Mission -->
+        <div class="footer-col brand-col">
+            <h3 class="logo-footer">CertiCore</h3>
+            <p class="mission">Unlock your potential with industry-recognized certifications and world-class tech training designed for the future.</p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col links-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Certifications -->
+        <div class="footer-col links-col">
+            <h4>Certifications</h4>
+            <ul>
+               <li><a href="certification.html">Certifications</a></li>
+                <li><a href="enterprise.html">Enterprise</a></li>
+                <li><a href="government.html">Government</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Support -->
+        <div class="footer-col links-col">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 CertiCore. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" title="Facebook" aria-label="Facebook">FB</a>
+            <a href="#" title="Twitter" aria-label="Twitter">TW</a>
+            <a href="#" title="LinkedIn" aria-label="LinkedIn">IN</a>
+            <a href="#" title="YouTube" aria-label="YouTube">YT</a>
+        </div>
+    </div>
+    </footer>
+
+    <script src="publics/js/global.js" defer></script>
+</body>
+</html>
