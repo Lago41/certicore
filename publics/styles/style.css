@@ -1303,3 +1303,389 @@ header.scrolled {
 .contact-info-item strong {
     color: var(--dark-grey);
 }
+
+/* =================================================================== */
+/* ======== PROFESSIONAL AUTHENTICATION PAGE STYLES (v2) ========= */
+/* =================================================================== */
+
+.auth-page-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* --- Left Side: Visual Branding --- */
+.auth-visual {
+    background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.auth-visual-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(247, 31, 31, 0.8), rgba(164, 53, 240, 0.8)); /* Brand gradient overlay */
+}
+
+.auth-visual-content {
+    position: relative;
+    z-index: 2;
+    max-width: 450px;
+}
+
+.auth-logo-link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.auth-visual h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.auth-visual p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+/* --- Right Side: Form Section --- */
+.auth-form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #f5f7fa; /* Light background for contrast */
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 450px;
+    background: #fff;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.auth-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--dark-grey);
+}
+
+.auth-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.auth-form .form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.auth-form .form-row .form-group {
+    flex: 1;
+}
+
+/* --- Floating Label Magic --- */
+.form-group.floating-label {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form-group.floating-label input {
+    width: 100%;
+    padding: 16px 12px 8px 12px; /* Bottom padding is smaller */
+    border: 2px solid var(--border-grey);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group.floating-label label {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    color: var(--text-secondary);
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+/* The magic happens here: When the input is focused or has text in it */
+.form-group.floating-label input:focus + label,
+.form-group.floating-label input:not(:placeholder-shown) + label {
+    top: 6px;
+    left: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--brand-red);
+}
+
+.form-group.floating-label input:focus {
+    border-color: var(--brand-red);
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 25px;
+    color: var(--text-secondary);
+}
+.auth-switch a {
+    color: var(--brand-red);
+    font-weight: 600;
+    text-decoration: none;
+}
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+.auth-footer-note {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.auth-forgot-password {
+    text-align: right;
+    margin-top: -20px; /* Pulls it up closer to the password field */
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+}
+.auth-forgot-password a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+}
+.auth-forgot-password a:hover {
+    color: var(--brand-red);
+    text-decoration: underline;
+}
+
+
+
+
+
+/* --- Dashboard Page --- */
+.dashboard-page {
+    padding: 80px 5%;
+    background: #fff;
+    min-height: 80vh;
+}
+.dashboard-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.dashboard-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #f5f7fa;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #eef;
+}
+.dashboard-welcome {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.dashboard-welcome strong {
+    color: var(--brand-red);
+    font-weight: 700;
+}
+.dashboard-status-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.dashboard-status-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+.status-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-grey);
+}
+.status-item:last-child {
+    border-bottom: none;
+}
+.status-label {
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+.status-value {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--dark-grey);
+}
+.status-value.submitted {
+    background-color: #ffe8cc;
+    color: #ff8c00;
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+.dashboard-action-card {
+    text-align: center;
+}
+.dashboard-action-card p {
+    margin-bottom: 20px;
+}
+
+
+/* =================================================================== */
+/* ============== APPLICATION STATUS DASHBOARD STYLES ============== */
+/* =================================================================== */
+
+.dashboard-body {
+    background-image: url('https://images.unsplash.com/photo-1560421683-1449800003c5?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.dashboard-page {
+    padding: 60px 5%;
+    min-height: 100vh;
+}
+
+.dashboard-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.loading-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--brand-red);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.application-header {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-grey);
+}
+.application-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+}
+.application-header p {
+    color: var(--text-secondary);
+}
+
+.application-status-list {
+    list-style: none;
+    padding: 0;
+}
+.status-step {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-grey);
+}
+.status-step:last-child {
+    border-bottom: none;
+}
+
+.status-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.status-icon svg {
+    width: 24px;
+    height: 24px;
+}
+.status-icon .icon-complete { color: #28a745; }
+.status-icon .icon-pending { color: #ffc107; }
+.status-icon .icon-waived { color: #6c757d; }
+
+.status-details h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    margin: 0;
+}
+.status-details .status-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.status-label.Complete { color: #28a745; }
+.status-label.Pending { color: #ffc107; }
+.status-label.Waived, .status-label.Not.Required { color: #6c757d; }
+
+.status-action .btn-view {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    background-color: #e9ecef;
+    color: var(--dark-grey);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+.status-action .btn-view:hover {
+    background-color: #ced4da;
+}
+
+.application-footer {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fffbe6;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}

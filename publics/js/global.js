@@ -115,3 +115,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+    // --- 7. Asynchronous Login Form Submission ---
+    const loginForm = document.getElementById('login-form');
+    if (loginForm) {
+        const formStatus = loginForm.nextElementSibling; // Get the status div right after the form
+
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Stop the default page redirect
+
+            const formData = new FormData(loginForm);
+            const submitButton = loginForm.querySelector('button[type="submit"]');
+
+            // Show "Signing In..." message
+            formStatus.textContent = "Signing In...";
+            formStatus.className = 'form-status sending';
+            submitButton.disabled = true;
+
+            // Send data to the login.php script
+            fetch(loginForm.action, {
+                method: 'POST',
+                body: formData,
+                credentials: 'include' // IMPORTANT: This sends the session cookie
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    // On success, show message and redirect to dashboard
+                    formStatus.textContent = "Login successful! Redirecting...";
+                    formStatus.className = 'form-status success';
+                    
+                    // Wait a moment for the user to see the message, then redirect
+                    setTimeout(() => {
+                        window.location.href = 'dashboard.html';
+                    }, 1000); // 1-second delay
+
+                } else {
+                    // On error, show the message from the server
+                    formStatus.textContent = data.message;
+                    formStatus.className = 'form-status error';
+                    submitButton.disabled = false;
+                }
+            })
+            .catch(error => {
+                console.error('Login Error:', error);
+                formStatus.textContent = 'A network error occurred. Please try again.';
+                formStatus.className = 'form-status error';
+                submitButton.disabled = false;
+            });
+        });
+    }
