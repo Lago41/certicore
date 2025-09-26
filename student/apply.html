@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Application - CertiCore</title>
+    
+    <!-- CORRECTED PATH: Goes up one level to find the 'publics' folder -->
     <link rel="icon" type="image/png" href="../publics/images/Untitled (40 x 40 px).png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CORRECTED PATH: Looks for style.css in the CURRENT folder ('student/') -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="form-body">
@@ -57,7 +62,10 @@
             <button type="submit" class="submit-btn">Submit Application</button>
         </form>
         <div id="form-status" class="form-status"></div>
+        <p class="auth-footer-note" style="text-align: center; margin-top: 20px;"><a href="index.html" style="color: #aaa; text-decoration: none;">Back to Dashboard</a></p>
     </main>
+
+    <!-- CORRECTED PATH: Looks for script.js in the CURRENT folder ('student/') -->
     <script src="script.js" defer></script>
 </body>
 </html>

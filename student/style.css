@@ -199,3 +199,111 @@ body {
     font-weight: 500;
     margin-bottom: 10px;
 }
+
+
+
+
+/* =================================================================== */
+/* ============== STUDENT DASHBOARD & FORMS STYLES ============== */
+/* =================================================================== */
+
+:root {
+    --brand-primary: #002e5d; /* Dark Blue */
+    --brand-secondary: #009ca6; /* Teal */
+    --brand-accent: #ffc72c; /* Yellow */
+    --bg-light: #f4f7fc;
+    --border-color: #e1e5eb;
+    --text-dark: #212529;
+    --text-light: #f8f9fa;
+    --text-muted: #6c757d;
+    --success: #28a745;
+    --warning: #ffc107;
+    --danger: #dc3545;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* ================== Main Dashboard Layout ================== */
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 260px 1fr; /* Sidebar and Main View */
+    height: 100vh;
+    transition: grid-template-columns 0.3s ease;
+}
+
+/* --- Left Sidebar --- */
+.sidebar-left {
+    background-color: var(--brand-primary);
+    color: var(--text-light);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease, padding 0.3s ease;
+    overflow-x: hidden;
+}
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.sidebar-logo { text-decoration: none; color: var(--text-light); }
+.logo-main { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 2rem; color: var(--brand-accent); }
+.logo-sub { font-size: 0.9rem; letter-spacing: 1px; opacity: 0.8; }
+.sidebar-toggle { background: none; border: none; color: #fff; cursor: pointer; padding: 5px; }
+.sidebar-nav { display: flex; flex-direction: column; gap: 10px; }
+.nav-item { display: flex; align-items: center; gap: 15px; padding: 15px; border-radius: 8px; color: var(--text-light); text-decoration: none; font-weight: 500; transition: background-color 0.2s ease; white-space: nowrap; }
+.nav-item:hover, .nav-item.active { background-color: rgba(255, 255, 255, 0.1); }
+
+/* --- Main View --- */
+.main-view { display: flex; flex-direction: column; overflow-y: auto; }
+.dashboard-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background-color: #fff; border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 10; }
+.admitted-path { font-weight: 600; color: var(--brand-secondary); }
+.user-profile { display: flex; align-items: center; gap: 15px; }
+#user-name { font-weight: 600; }
+.logout-button { background: none; border: none; color: var(--text-muted); font-weight: 600; cursor: pointer; font-size: 0.9rem; }
+.main-content { padding: 30px; }
+.main-content h1 { font-family: 'Poppins', sans-serif; font-size: 2.2rem; margin-bottom: 20px; }
+
+/* --- Collapsed Sidebar --- */
+.dashboard-container.sidebar-collapsed { grid-template-columns: 80px 1fr; }
+.sidebar-left.collapsed { padding: 20px 10px; align-items: center; }
+.sidebar-left.collapsed .logo-sub, .sidebar-left.collapsed .nav-item span { display: none; }
+.sidebar-left.collapsed .sidebar-logo { justify-content: center; }
+.sidebar-left.collapsed .nav-item { justify-content: center; }
+
+/* ================== Application Form Styles ================== */
+.form-body { display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+.form-container { width: 100%; max-width: 700px; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+.form-title { font-family: 'Poppins', sans-serif; text-align: center; margin-bottom: 10px; font-size: 1.8rem; }
+.form-subtitle { text-align: center; color: var(--text-muted); margin-bottom: 30px; }
+.form-step { margin-bottom: 30px; border-top: 1px solid var(--border-color); padding-top: 20px; }
+.form-step h2 { font-size: 1.3rem; margin-bottom: 20px; color: var(--brand-primary); }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; }
+.form-group input[type="text"], .form-group input[type="email"], .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+.form-group input:disabled { background: #eee; cursor: not-allowed; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--brand-secondary); box-shadow: 0 0 0 3px rgba(0, 156, 166, 0.15); }
+.form-group-checkbox { display: flex; align-items: center; gap: 10px; }
+.submit-btn { width: 100%; padding: 15px; font-size: 1.1rem; background: var(--brand-secondary); color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.2s ease; }
+.submit-btn:hover { background-color: #007a82; }
+
+/* --- Form Status Messages --- */
+.form-status { width: 100%; padding: 15px; margin-top: 20px; border-radius: 8px; text-align: center; font-weight: 600; display: none; }
+.form-status.sending, .form-status.success, .form-status.error { display: block; }
+.form-status.sending { background-color: #e9ecef; color: #495057; }
+.form-status.success { background-color: #d4edda; color: #155724; }
+.form-status.error { background-color: #f8d7da; color: #721c24; }
+
