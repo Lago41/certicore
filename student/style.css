@@ -1,0 +1,201 @@
+/* =================================================================== */
+/* ============== STUDENT DASHBOARD PORTAL STYLES ============== */
+/* =================================================================== */
+
+:root {
+    --brand-primary: #002e5d; /* Dark Blue */
+    --brand-secondary: #046e76; /* Teal */
+    --brand-accent: #ffc72c; /* Yellow */
+    --bg-light: #f8f9fa;
+    --border-color: #dee2e6;
+    --text-dark: #212529;
+    --text-light: #f8f9fa;
+    --text-muted: #6c757d;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 260px 1fr; /* Sidebar and Main View */
+    height: 100vh;
+}
+
+/* --- Left Sidebar --- */
+.sidebar-left {
+    background-color: var(--brand-primary);
+    color: var(--text-light);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-logo {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.sidebar-logo a {
+    text-decoration: none;
+    color: var(--text-light);
+}
+.logo-main {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--brand-accent);
+}
+.logo-sub {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+.nav-item:hover, .nav-item.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.nav-item.active {
+    font-weight: 700;
+}
+
+/* --- Main View --- */
+.main-view {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Allow scrolling */
+}
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.top-nav {
+    display: flex;
+    gap: 25px;
+}
+.top-nav a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+}
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#user-name {
+    font-weight: 600;
+}
+.profile-icon-wrapper {
+    background-color: var(--bg-light);
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logout-button {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* --- Content Grid (Center + Right) --- */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px; /* Main content and right sidebar */
+    gap: 30px;
+    padding: 30px;
+    flex-grow: 1;
+}
+
+/* --- Center Content --- */
+.main-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.main-content .welcome-message {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* --- Right Sidebar --- */
+.info-card {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.info-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background-color: var(--brand-secondary);
+    color: var(--text-light);
+    border-radius: 8px 8px 0 0;
+}
+.info-card-header h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.info-card-body {
+    padding: 20px;
+}
+.info-card-body details {
+    margin-bottom: 10px;
+}
+.info-card-body summary {
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+}
+.info-card-body summary::-webkit-details-marker {
+    display: none;
+}
+.info-card-body .no-data {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    padding: 10px 0 0 10px;
+}
+.quick-link {
+    display: block;
+    color: var(--brand-primary);
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 10px;
+}

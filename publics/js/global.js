@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     // Wait a moment for the user to see the message, then redirect
                     setTimeout(() => {
-                        window.location.href = 'dashboard.html';
+                        window.location.href = 'student/index.html';
                     }, 1000); // 1-second delay
 
                 } else {
