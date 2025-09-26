@@ -3,69 +3,43 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Application - CertiCore</title>
-    
-    <!-- CORRECTED PATH: Goes up one level to find the 'publics' folder -->
+    <title>Application Portal - CertiCore</title>
     <link rel="icon" type="image/png" href="../publics/images/Untitled (40 x 40 px).png">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- CORRECTED PATH: Looks for style.css in the CURRENT folder ('student/') -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="form-body">
-    <main class="form-container">
-        <h1 class="form-title">CertiCore Admission Application</h1>
-        <p class="form-subtitle">Please complete all sections to submit your application.</p>
-        
-        <form id="application-form" action="https://api.certicore.org/submit_application.php" method="POST">
-            <div class="form-step">
-                <h2>Applicant Information</h2>
-                <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" id="applicant_name" disabled value="Loading...">
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="text" id="applicant_email" disabled value="Loading...">
+<body>
+    <div class="portal-container">
+        <!-- ======================== Left Sidebar: Application Steps ======================== -->
+        <aside class="portal-sidebar">
+            <div class="sidebar-user-info">
+                <div class="user-initials" id="user-initials-placeholder"></div>
+                <div>
+                    <h2 id="user-name-placeholder">Loading...</h2>
+                    <span id="applicant-id-placeholder"></span>
                 </div>
             </div>
-            
-            <div class="form-step">
-                <h2>Career Path</h2>
-                <div class="form-group">
-                    <label for="career_path">Choose your desired career path:</label>
-                    <select id="career_path" name="career_path" required>
-                        <option value="" disabled selected>Select a path...</option>
-                        <option value="Cybersecurity">Cybersecurity</option>
-                        <option value="Cloud Computing">Cloud Computing</option>
-                        <option value="Data Science & AI">Data Science & AI</option>
-                    </select>
-                </div>
-                 <div class="form-group">
-                    <label for="motivation">Why did you choose this career path?</label>
-                    <textarea id="motivation" name="motivation" rows="4" required placeholder="Describe your interest and goals..."></textarea>
-                </div>
+            <nav id="application-steps-nav" class="application-steps-nav">
+                <!-- JavaScript will dynamically generate the step checklist here -->
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../index.html">Back to CertiCore Home</a>
+                <button id="logout-btn">Logout</button>
             </div>
+        </aside>
 
-            <div class="form-step">
-                <h2>Consent</h2>
-                <div class="form-group-checkbox">
-                    <input type="checkbox" id="release_consent" name="release_consent" required>
-                    <label for="release_consent">I consent to the release of my academic records to CertiCore for admission purposes.</label>
-                </div>
-            </div>
-            
-            <button type="submit" class="submit-btn">Submit Application</button>
-        </form>
-        <div id="form-status" class="form-status"></div>
-        <p class="auth-footer-note" style="text-align: center; margin-top: 20px;"><a href="index.html" style="color: #aaa; text-decoration: none;">Back to Dashboard</a></p>
-    </main>
-
-    <!-- CORRECTED PATH: Looks for script.js in the CURRENT folder ('student/') -->
+        <!-- ======================== Right Side: Main Content ======================== -->
+        <main class="portal-content">
+             <div id="portal-content-area">
+                <!-- JavaScript will dynamically load the content for each step here -->
+                <div class="loading-spinner"></div>
+             </div>
+        </main>
+    </div>
+    
     <script src="script.js" defer></script>
 </body>
 </html>

@@ -1,223 +1,19 @@
 /* =================================================================== */
-/* ============== STUDENT DASHBOARD PORTAL STYLES ============== */
+/* ======== PROFESSIONAL STUDENT PORTAL & APPLICATION STYLES ========= */
 /* =================================================================== */
 
+/* --- Global Variables & Resets --- */
 :root {
-    --brand-primary: #002e5d; /* Dark Blue */
-    --brand-secondary: #046e76; /* Teal */
-    --brand-accent: #ffc72c; /* Yellow */
-    --bg-light: #f8f9fa;
-    --border-color: #dee2e6;
-    --text-dark: #212529;
-    --text-light: #f8f9fa;
-    --text-muted: #6c757d;
-}
-
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: "Roboto", sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-}
-
-.dashboard-container {
-    display: grid;
-    grid-template-columns: 260px 1fr; /* Sidebar and Main View */
-    height: 100vh;
-}
-
-/* --- Left Sidebar --- */
-.sidebar-left {
-    background-color: var(--brand-primary);
-    color: var(--text-light);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-}
-.sidebar-logo {
-    margin-bottom: 40px;
-    text-align: center;
-}
-.sidebar-logo a {
-    text-decoration: none;
-    color: var(--text-light);
-}
-.logo-main {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    color: var(--brand-accent);
-}
-.logo-sub {
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    opacity: 0.8;
-}
-.sidebar-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.nav-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 15px;
-    border-radius: 8px;
-    color: var(--text-light);
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.2s ease;
-}
-.nav-item:hover, .nav-item.active {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-.nav-item.active {
-    font-weight: 700;
-}
-
-/* --- Main View --- */
-.main-view {
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto; /* Allow scrolling */
-}
-.dashboard-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #fff;
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-.top-nav {
-    display: flex;
-    gap: 25px;
-}
-.top-nav a {
-    color: var(--text-dark);
-    text-decoration: none;
-    font-weight: 500;
-}
-.user-profile {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-#user-name {
-    font-weight: 600;
-}
-.profile-icon-wrapper {
-    background-color: var(--bg-light);
-    border-radius: 50%;
-    padding: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.logout-button {
-    background: none;
-    border: none;
-    color: var(--text-muted);
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 0.9rem;
-}
-
-/* --- Content Grid (Center + Right) --- */
-.content-grid {
-    display: grid;
-    grid-template-columns: 1fr 320px; /* Main content and right sidebar */
-    gap: 30px;
-    padding: 30px;
-    flex-grow: 1;
-}
-
-/* --- Center Content --- */
-.main-content h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-.main-content .welcome-message {
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--border-color);
-}
-
-/* --- Right Sidebar --- */
-.info-card {
-    background-color: #fff;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-.info-card-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 15px;
-    background-color: var(--brand-secondary);
-    color: var(--text-light);
-    border-radius: 8px 8px 0 0;
-}
-.info-card-header h2 {
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-.info-card-body {
-    padding: 20px;
-}
-.info-card-body details {
-    margin-bottom: 10px;
-}
-.info-card-body summary {
-    font-weight: 600;
-    cursor: pointer;
-    list-style: none;
-}
-.info-card-body summary::-webkit-details-marker {
-    display: none;
-}
-.info-card-body .no-data {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    padding: 10px 0 0 10px;
-}
-.quick-link {
-    display: block;
-    color: var(--brand-primary);
-    text-decoration: none;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-
-
-
-/* =================================================================== */
-/* ============== STUDENT DASHBOARD & FORMS STYLES ============== */
-/* =================================================================== */
-
-:root {
-    --brand-primary: #002e5d; /* Dark Blue */
-    --brand-secondary: #009ca6; /* Teal */
-    --brand-accent: #ffc72c; /* Yellow */
-    --bg-light: #f4f7fc;
+    --brand-primary: #002e5d; /* Dark Blue from BYU */
+    --brand-secondary: #009ca6; /* Teal for accents */
+    --bg-main: #f4f7fc; /* A very light, clean background */
+    --bg-sidebar: #ffffff;
     --border-color: #e1e5eb;
     --text-dark: #212529;
-    --text-light: #f8f9fa;
     --text-muted: #6c757d;
     --success: #28a745;
-    --warning: #ffc107;
+    --pending: #ffc107; /* Yellow for pending status */
+    --disabled: #ced4da;
     --danger: #dc3545;
 }
 
@@ -229,81 +25,245 @@ body {
 
 body {
     font-family: "Roboto", sans-serif;
-    background-color: var(--bg-light);
+    background-color: var(--bg-main);
     color: var(--text-dark);
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased; /* Smoother fonts */
 }
 
-/* ================== Main Dashboard Layout ================== */
+/* ================== Main Portal Layout ================== */
 
-.dashboard-container {
+.portal-container {
     display: grid;
-    grid-template-columns: 260px 1fr; /* Sidebar and Main View */
+    /* Sidebar width and the rest of the space */
+    grid-template-columns: 320px 1fr; 
     height: 100vh;
-    transition: grid-template-columns 0.3s ease;
 }
 
-/* --- Left Sidebar --- */
-.sidebar-left {
-    background-color: var(--brand-primary);
-    color: var(--text-light);
-    padding: 20px;
+/* --- Sidebar (Left Column) --- */
+.portal-sidebar {
+    background: var(--bg-sidebar);
+    border-right: 1px solid var(--border-color);
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    transition: width 0.3s ease, padding 0.3s ease;
-    overflow-x: hidden;
+    overflow-y: auto;
 }
-.sidebar-header {
+
+.sidebar-user-info {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    gap: 15px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
 }
-.sidebar-logo { text-decoration: none; color: var(--text-light); }
-.logo-main { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 2rem; color: var(--brand-accent); }
-.logo-sub { font-size: 0.9rem; letter-spacing: 1px; opacity: 0.8; }
-.sidebar-toggle { background: none; border: none; color: #fff; cursor: pointer; padding: 5px; }
-.sidebar-nav { display: flex; flex-direction: column; gap: 10px; }
-.nav-item { display: flex; align-items: center; gap: 15px; padding: 15px; border-radius: 8px; color: var(--text-light); text-decoration: none; font-weight: 500; transition: background-color 0.2s ease; white-space: nowrap; }
-.nav-item:hover, .nav-item.active { background-color: rgba(255, 255, 255, 0.1); }
 
-/* --- Main View --- */
-.main-view { display: flex; flex-direction: column; overflow-y: auto; }
-.dashboard-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background-color: #fff; border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 10; }
-.admitted-path { font-weight: 600; color: var(--brand-secondary); }
-.user-profile { display: flex; align-items: center; gap: 15px; }
-#user-name { font-weight: 600; }
-.logout-button { background: none; border: none; color: var(--text-muted); font-weight: 600; cursor: pointer; font-size: 0.9rem; }
-.main-content { padding: 30px; }
-.main-content h1 { font-family: 'Poppins', sans-serif; font-size: 2.2rem; margin-bottom: 20px; }
+.user-initials {
+    width: 50px;
+    height: 50px;
+    background-color: var(--brand-primary);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
 
-/* --- Collapsed Sidebar --- */
-.dashboard-container.sidebar-collapsed { grid-template-columns: 80px 1fr; }
-.sidebar-left.collapsed { padding: 20px 10px; align-items: center; }
-.sidebar-left.collapsed .logo-sub, .sidebar-left.collapsed .nav-item span { display: none; }
-.sidebar-left.collapsed .sidebar-logo { justify-content: center; }
-.sidebar-left.collapsed .nav-item { justify-content: center; }
+.sidebar-user-info h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    margin: 0;
+    line-height: 1.2;
+}
 
-/* ================== Application Form Styles ================== */
-.form-body { display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
-.form-container { width: 100%; max-width: 700px; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-.form-title { font-family: 'Poppins', sans-serif; text-align: center; margin-bottom: 10px; font-size: 1.8rem; }
-.form-subtitle { text-align: center; color: var(--text-muted); margin-bottom: 30px; }
-.form-step { margin-bottom: 30px; border-top: 1px solid var(--border-color); padding-top: 20px; }
-.form-step h2 { font-size: 1.3rem; margin-bottom: 20px; color: var(--brand-primary); }
-.form-group { margin-bottom: 20px; }
-.form-group label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; }
-.form-group input[type="text"], .form-group input[type="email"], .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
-.form-group input:disabled { background: #eee; cursor: not-allowed; }
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--brand-secondary); box-shadow: 0 0 0 3px rgba(0, 156, 166, 0.15); }
-.form-group-checkbox { display: flex; align-items: center; gap: 10px; }
-.submit-btn { width: 100%; padding: 15px; font-size: 1.1rem; background: var(--brand-secondary); color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.2s ease; }
+#applicant-id-placeholder {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.application-steps-nav {
+    flex-grow: 1; /* Pushes footer to the bottom */
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 10px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: background-color 0.2s ease;
+}
+
+.step-icon {
+    margin-top: 4px;
+}
+
+.step-icon svg {
+    width: 20px;
+    height: 20px;
+}
+.step-status-Complete { color: var(--success); }
+.step-status-Pending { color: var(--pending); }
+.step-status-Locked { color: var(--disabled); }
+
+.step-details h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.step-details.clickable {
+    cursor: pointer;
+}
+
+.step-details.clickable:hover h3 {
+    color: var(--brand-secondary);
+}
+
+.step-item.active {
+    background-color: #e9ecef;
+}
+.step-item.active .step-details h3 {
+    color: var(--brand-primary);
+}
+
+.step-details p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+.sidebar-footer a, .sidebar-footer button {
+    color: var(--text-muted);
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    padding: 8px 0;
+    width: 100%;
+    text-align: left;
+    font-size: inherit;
+    font-family: inherit;
+}
+.sidebar-footer a:hover, .sidebar-footer button:hover {
+    color: var(--brand-primary);
+}
+
+/* --- Main Content (Right Column) --- */
+.portal-content {
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.content-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+.content-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+.content-header p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 700px;
+}
+
+.loading-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--brand-secondary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 40px auto;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* Form Styles for loaded content */
+.form-step h2 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--brand-primary);
+}
+.form-group { margin-bottom: 25px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
+.form-group input[type="text"], .form-group input[type="email"], .form-group select, .form-group textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+.form-group input:disabled { background-color: #e9ecef; cursor: not-allowed; }
+.form-group-checkbox { display: flex; align-items: center; gap: 10px; margin-top: 30px; }
+.submit-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: var(--brand-secondary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.2s ease;
+}
 .submit-btn:hover { background-color: #007a82; }
+.form-status { margin-top: 20px; font-weight: 600; padding: 12px; border-radius: 8px; }
+.form-status.success { color: #0f5132; background-color: #d1e7dd; }
+.form-status.error { color: #842029; background-color: #f8d7da; }
 
-/* --- Form Status Messages --- */
-.form-status { width: 100%; padding: 15px; margin-top: 20px; border-radius: 8px; text-align: center; font-weight: 600; display: none; }
-.form-status.sending, .form-status.success, .form-status.error { display: block; }
-.form-status.sending { background-color: #e9ecef; color: #495057; }
-.form-status.success { background-color: #d4edda; color: #155724; }
-.form-status.error { background-color: #f8d7da; color: #721c24; }
+/* ================== Responsive Design ================== */
+@media (max-width: 992px) {
+    .portal-container {
+        grid-template-columns: 80px 1fr; /* Collapse sidebar */
+    }
+    .sidebar-user-info h2, .sidebar-user-info span, .step-details {
+        display: none;
+    }
+    .sidebar-user-info {
+        justify-content: center;
+    }
+    .step-item {
+        justify-content: center;
+    }
+}
 
+@media (max-width: 768px) {
+    .portal-container {
+        grid-template-columns: 1fr; /* Stack sidebar and content */
+        height: auto;
+    }
+    .portal-sidebar {
+        /* This would need JS to become a slide-out menu or top bar,
+           for now we'll just stack it. */
+        height: auto;
+    }
+    .portal-content {
+        padding: 20px;
+    }
+    .content-header h1 {
+        font-size: 1.8rem;
+    }
+}
