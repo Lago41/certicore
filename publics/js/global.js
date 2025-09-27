@@ -127,8 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const formData = new FormData(loginForm);
             const submitButton = loginForm.querySelector('button[type="submit"]');
-
-            // Show "Signing In..." message
             formStatus.textContent = "Signing In...";
             formStatus.className = 'form-status sending';
             submitButton.disabled = true;
