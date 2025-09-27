@@ -1689,3 +1689,146 @@ header.scrolled {
     color: #856404;
     border: 1px solid #ffeeba;
 }
+
+
+/* =================================================================== */
+/* ========== PROFESSIONAL CAREERS & APPLICATION PAGE STYLES ========= */
+/* =================================================================== */
+
+.careers-page .application-section {
+    padding: 80px 5%;
+    background-color: var(--bg-light);
+}
+
+.application-form {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.application-form h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--brand-primary);
+}
+.application-form h2:first-of-type {
+    margin-top: 0;
+}
+
+/* Use the floating label styles from the auth pages for consistency */
+.application-form .form-group.floating-label {
+    position: relative;
+    margin-bottom: 30px;
+}
+.application-form .form-group.floating-label input {
+    width: 100%;
+    padding: 16px 12px 8px 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+.application-form .form-group.floating-label label {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    color: var(--text-muted);
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+.application-form .form-group.floating-label input:focus + label,
+.application-form .form-group.floating-label input:not(:placeholder-shown) + label {
+    top: 6px;
+    left: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--brand-secondary);
+}
+.application-form .form-group.floating-label input:focus {
+    border-color: var(--brand-secondary);
+}
+.application-form .form-row {
+    display: flex;
+    gap: 20px;
+}
+.application-form .form-row .form-group {
+    flex: 1;
+}
+
+/* Specific styles for non-floating labels */
+.application-form .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+/* Improved File Input */
+.file-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    transition: border-color 0.2s ease;
+}
+.file-input-wrapper:hover {
+    border-color: var(--brand-secondary);
+}
+.file-input-wrapper input[type="file"] {
+    position: absolute;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+.file-input-label {
+    padding: 12px 25px;
+    background-color: #f8f9fa;
+    color: var(--text-dark);
+    cursor: pointer;
+    font-weight: 600;
+    white-space: nowrap;
+    border-right: 2px solid var(--border-color);
+    transition: background-color 0.2s ease;
+}
+.file-input-wrapper:hover .file-input-label {
+    background-color: #e9ecef;
+}
+.file-name {
+    padding: 0 15px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9rem;
+}
+
+/* Improved Progress Bar */
+.progress-bar-container {
+    width: 100%;
+    height: 12px;
+    background-color: #e9ecef;
+    border-radius: 6px;
+    margin: 25px 0;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--brand-secondary), #00c6d4);
+    transition: width 0.4s ease;
+    border-radius: 6px;
+}

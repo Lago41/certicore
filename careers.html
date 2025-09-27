@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Careers - CertiCore</title>
+    <link rel="icon" type="image/png" href="publics/images/Untitled (40 x 40 px).png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="publics/styles/style.css">
+
+    <style>
+
+        /* =================================================================== */
+/* ======== UNIFIED & PROFESSIONAL FORM STYLES (ALL PAGES) ========= */
+/* =================================================================== */
+
+/* --- Main container for single-column forms (Contact, Careers) --- */
+.form-section {
+    padding: 80px 5%;
+    background-color: var(--bg-light);
+}
+
+.form-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.form-wrapper h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--brand-primary);
+}
+.form-wrapper h2:first-of-type {
+    margin-top: 0;
+}
+
+/* --- Two-Column Auth Layout (Login, Register) --- */
+.auth-page-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.auth-visual {
+    background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.auth-visual-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(247, 31, 31, 0.8), rgba(164, 53, 240, 0.8));
+}
+
+.auth-visual-content { position: relative; z-index: 2; max-width: 450px; }
+.auth-logo-link { font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight: 700; color: #fff; text-decoration: none; display: inline-block; margin-bottom: 20px; }
+.auth-visual h2 { font-family: 'Poppins', sans-serif; font-size: 2.5rem; margin-bottom: 15px; }
+.auth-visual p { font-size: 1.1rem; line-height: 1.7; opacity: 0.9; }
+
+.auth-form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: var(--bg-light);
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 450px;
+    background: #fff;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.auth-title { font-family: 'Poppins', sans-serif; font-size: 2.2rem; text-align: center; margin-bottom: 10px; color: var(--text-dark); }
+.auth-subtitle { text-align: center; color: var(--text-muted); margin-bottom: 40px; }
+
+/* --- Shared Form Element Styles --- */
+.form-row { display: flex; gap: 20px; }
+.form-row .form-group { flex: 1; }
+.form-group { margin-bottom: 25px; }
+.form-group label { display: block; margin-bottom: 10px; font-weight: 600; font-size: 0.95rem; color: var(--text-dark); }
+
+/* Floating Label Styles */
+.form-group.floating-label { position: relative; margin-bottom: 30px; }
+.form-group.floating-label input {
+    width: 100%; padding: 16px 12px 8px 12px; border: 2px solid var(--border-color);
+    border-radius: 8px; font-size: 1rem; outline: none; transition: border-color 0.2s ease;
+}
+.form-group.floating-label label {
+    position: absolute; top: 14px; left: 14px; color: var(--text-muted);
+    pointer-events: none; transition: all 0.2s ease;
+}
+.form-group.floating-label input:focus + label,
+.form-group.floating-label input:not(:placeholder-shown) + label {
+    top: 6px; left: 12px; font-size: 0.75rem; font-weight: 600; color: var(--brand-secondary);
+}
+.form-group.floating-label input:focus { border-color: var(--brand-secondary); }
+
+/* Standard Inputs, Textareas, Selects */
+select, textarea {
+    width: 100%; padding: 12px; border: 1px solid var(--border-color);
+    border-radius: 8px; font-size: 1rem; background-color: #fff;
+}
+
+/* File Input */
+.file-input-wrapper { position: relative; display: flex; align-items: center; border: 2px solid var(--border-color); border-radius: 8px; transition: border-color 0.2s ease; }
+.file-input-wrapper:hover { border-color: var(--brand-secondary); }
+.file-input-wrapper input[type="file"] { position: absolute; width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; z-index: -1; }
+.file-input-label { padding: 12px 25px; background-color: #f8f9fa; color: var(--text-dark); cursor: pointer; font-weight: 600; white-space: nowrap; border-right: 2px solid var(--border-color); transition: background-color 0.2s ease; }
+.file-input-wrapper:hover .file-input-label { background-color: #e9ecef; }
+.file-name { padding: 0 15px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 0.9rem; }
+
+/* Buttons & Links */
+.auth-btn, .application-form .btn.primary {
+    width: 100%; padding: 16px; font-size: 1.1rem; margin-top: 10px;
+    font-weight: 600; border-radius: 8px;
+}
+.auth-switch { text-align: center; margin-top: 25px; color: var(--text-muted); }
+.auth-switch a { color: var(--brand-red); font-weight: 600; text-decoration: none; }
+.auth-switch a:hover { text-decoration: underline; }
+.auth-footer-note { margin-top: 30px; font-size: 0.8rem; color: #aaa; text-align: center; }
+
+/* Progress Bar */
+.progress-bar-container { width: 100%; height: 12px; background-color: #e9ecef; border-radius: 6px; margin: 25px 0; overflow: hidden; border: 1px solid var(--border-color); }
+.progress-bar { width: 0%; height: 100%; background: linear-gradient(90deg, var(--brand-secondary), #00c6d4); transition: width 0.4s ease; border-radius: 6px; }
+
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" style="text-decoration: none;"><h1 class="logo">CertiCore</h1></a>
+        <nav class="main-nav">
+            <ul class="nav_links">
+                <li><a href="certification.html">Certifications</a></li>
+                <li><a href="enterprise.html">Enterprise</a></li>
+                <li><a href="government.html">Government</a></li>
+                <li><a href="help-center.html">Help Center</a></li>
+            </ul>
+        </nav>
+        <a class="cta desktop-cta" href="login.html"><button>Login</button></a>
+        <button class="hamburger-menu" aria-label="Open navigation menu"><div class="bar"></div><div class="bar"></div><div class="bar"></div></button>
+        <div class="mobile-nav">
+            <!-- Mobile links here -->
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="careers-page">
+        <section class="page-hero short-hero" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content text-center">
+                <h1 class="hero-title">Join Our Team</h1>
+                <p class="hero-subtitle">Help us shape the future of tech education. Apply for a role at CertiCore today.</p>
+            </div>
+        </section>
+
+        <section class="application-section">
+            <div class="container">
+                <form id="job-application-form" class="application-form" action="https://api.certicore.org/submit_job_application.php" method="POST" enctype="multipart/form-data">
+                    <h2>Your Information</h2>
+                    <div class="form-group floating-label">
+                        <input type="text" id="full_name" name="full_name" placeholder=" " required>
+                        <label for="full_name">Full Name</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group floating-label">
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="form-group floating-label">
+                            <input type="tel" id="phone" name="phone" placeholder=" " required>
+                            <label for="phone">Phone Number</label>
+                        </div>
+                    </div>
+                     <div class="form-group floating-label">
+                        <input type="url" id="linkedin" name="linkedin" placeholder=" " required>
+                        <label for="linkedin">LinkedIn Profile URL</label>
+                    </div>
+
+                    <!-- =========== NEW SECTION ADDED HERE =========== -->
+                    <h2>Position Details</h2>
+                    <div class="form-group">
+                        <label for="position">Position Applying For</label>
+                        <select id="position" name="position" required>
+                            <option value="" disabled selected>Select an open position...</option>
+                            <option value="Cybersecurity Instructor">Cybersecurity Instructor</option>
+                            <option value="Cloud Solutions Curriculum Developer">Cloud Solutions Curriculum Developer</option>
+                            <option value="Student Success Advisor">Student Success Advisor</option>
+                            <option value="Admissions Coordinator">Admissions Coordinator</option>
+                            <option value="web Developer">Web Developer</option>
+                            <option value="IT">technical Support</option>
+                            <option value="accountind">Accounting</option>
+                            <option value="adminastrative assist">Administrative Assistance</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="why_position">Why are you interested in this specific position?</label>
+                        <textarea id="why_position" name="why_position" rows="4" placeholder="Briefly describe your motivation and relevant skills for this role..."></textarea>
+                    </div>
+                    <!-- ============================================= -->
+                    
+                    <h2>Your Documents</h2>
+                    <div class="form-group">
+                        <label for="resume">Upload Resume (PDF, DOC, DOCX - Max 10MB)</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                            <label for="resume" class="file-input-label">Choose File</label>
+                            <span class="file-name" id="resume-file-name">No file chosen</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="video">"Tell Me About Yourself" Video (MP4, MOV, WEBM - Max 150MB)</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="video" name="video" accept=".mp4,.mov,.webm" required>
+                             <label for="video" class="file-input-label">Choose File</label>
+                            <span class="file-name" id="video-file-name">No file chosen</span>
+                        </div>
+                    </div>
+
+                    <h2>Cover Letter</h2>
+                    <div class="form-group">
+                        <textarea id="cover_letter" name="cover_letter" rows="6" placeholder="Briefly tell us why you're a great fit for CertiCore..."></textarea>
+                    </div>
+                    
+                    <!-- Progress Bar for Uploads -->
+                    <div class="progress-bar-container" id="progress-container" style="display: none;">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+
+                    <button type="submit" class="btn primary auth-btn">Submit Application</button>
+                    <div id="form-status" class="form-status"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <h3 class="logo-footer">CertiCore</h3>
+                <p class="mission">Unlock your potential with industry-recognized certifications and world-class tech training designed for the future.</p>
+            </div>
+            <div class="footer-col links-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="careers.html">careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col links-col">
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="certification.html">Certifications</a></li>
+                    <li><a href="enterprise.html">Enterprise</a></li>
+                    <li><a href="government.html">Government</a></li>
+                </ul>
+            </div>
+            <div class="footer-col links-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="help-center.html">Help Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2025 CertiCore. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" title="Facebook" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V14.89H8.038v-2.89h2.4V9.61c0-2.384 1.41-3.696 3.593-3.696.882 0 1.801.166 1.801.166v2.451h-1.21c-1.192 0-1.571.72-1.571 1.503v1.761h2.766l-.438 2.89h-2.328v7.005C18.343 21.128 22 16.991 22 12z"/></svg></a>
+                <a href="#" title="Twitter" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                <a href="#" title="LinkedIn" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476z"/></svg></a>
+                <a href="#" title="YouTube" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12z"/></svg></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="publics/js/global.js" defer></script>
+</body>
+</html>
