@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Register - CertiCore</title>
+    <link rel="icon" type="image/png" href="publics/images/Untitled (40 x 40 px).png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="publics/styles/style.css">
+</head>
+<body>
+
+    <!-- ======================== Header ======================== -->
+    <header>
+        <a href="index.html" style="text-decoration: none;"><h1 class="logo">CertiCore</h1></a>
+
+        <!-- Desktop Navigation -->
+        <nav class="main-nav">
+            <ul class="nav_links">
+                <li><a href="certification.html">Certifications</a></li>
+                <li><a href="enterprise.html">Enterprise</a></li>
+                <li><a href="government.html">Government</a></li>
+                <li><a href="#">Partner</a></li>
+                <li><a href="help-center.html">Help Center</a></li>
+            </ul>
+        </nav>
+        <a class="cta desktop-cta" href="https://portal.certicore.org/login.php"><button>Login</button></a>
+
+        <!-- Mobile Navigation Elements -->
+        <button class="hamburger-menu" aria-label="Open navigation menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+        <div class="mobile-nav">
+            <a href="certification.html">Certifications</a>
+            <a href="enterprise.html">Enterprise</a>
+            <a href="government.html">Government</a>
+            <a href="#">Partner</a>
+            <a href="help-center.html">Help Center</a>
+            <a class="cta mobile-cta" href="https://portal.certicore.org/login.php"><button>Login</button></a>
+        </div>
+    </header>
+
+    <!-- ======================== Main Content ======================== -->
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero short-hero" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content text-center">
+                <h1 class="hero-title">Join CertiCore</h1>
+                <p class="hero-subtitle">Start your journey to tech certification success. Create your account and unlock your potential.</p>
+            </div>
+        </section>
+
+        <!-- Registration Form Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-container">
+                    <!-- Left Column: Registration Form -->
+                    <div class="contact-form-container">
+                        <h2 class="section-title" style="text-align: left;">Create Your Account</h2>
+                        <form id="register-form" class="contact-form" method="POST" action="https://api.certicore.org/register.php">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" name="password" required minlength="8">
+                                    <small>Minimum 8 characters</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirm Password</label>
+                                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="interests">Areas of Interest</label>
+                                <select id="interests" name="interests">
+                                    <option value="">Select your main interest...</option>
+                                    <option value="AI">AI</option>
+                                    <option value="Network">Network</option>
+                                    <option value="Cyber">Cybersecurity</option>
+                                    <option value="Cloud">Cloud</option>
+                                    
+                                    <option value="Data">Data Analysis</option>
+                                    <option value="Digital">Digital Skills</option>
+                                    <option value="Support">Tech Support</option>
+                                </select>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="newsletter" value="1">
+                                    <span class="checkbox-text">I want to receive updates about new certifications and career opportunities</span>
+                                </label>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="terms" value="1" required>
+                                    <span class="checkbox-text">I agree to the <a href="#" target="_blank">Terms of Service</a> and <a href="#" target="_blank">Privacy Policy</a></span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn primary">Create Account</button>
+                        </form>
+                        <div id="form-status" class="form-status"></div>
+                        <div class="form-footer">
+                            <p>Already have an account? <a href="https://portal.certicore.org/login.php">Sign in here</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Benefits -->
+                    <div class="contact-info-container">
+                        <h2 class="section-title" style="text-align: left;">Why Join CertiCore?</h2>
+                        <p>Unlock your potential with our comprehensive certification platform.</p>
+                        <div class="contact-info-item">
+                            <div class="solution-icon small-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            </div>
+                            <div>
+                                <strong>Industry-Recognized Certifications</strong><br>
+                                Get certifications that employers trust and value
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="solution-icon small-icon">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <div>
+                                <strong>Expert Training</strong><br>
+                                Learn from industry professionals and subject matter experts
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="solution-icon small-icon">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-1 16H9V7h9v14z"/></svg>
+                            </div>
+                            <div>
+                                <strong>Flexible Learning</strong><br>
+                                Study at your own pace with 24/7 access to materials
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="solution-icon small-icon">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+                            </div>
+                            <div>
+                                <strong>Career Growth</strong><br>
+                                140% higher median salaries in tech careers
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================== Footer ======================== -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <h3 class="logo-footer">CertiCore</h3>
+                <p class="mission">Unlock your potential with industry-recognized certifications and world-class tech training designed for the future.</p>
+            </div>
+            <div class="footer-col links-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col links-col">
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="certification.html">Certifications</a></li>
+                    <li><a href="enterprise.html">Enterprise</a></li>
+                    <li><a href="government.html">Government</a></li>
+                </ul>
+            </div>
+            <div class="footer-col links-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="help-center.html">Help Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2025 CertiCore. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" title="Facebook" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V14.89H8.038v-2.89h2.4V9.61c0-2.384 1.41-3.696 3.593-3.696.882 0 1.801.166 1.801.166v2.451h-1.21c-1.192 0-1.571.72-1.571 1.503v1.761h2.766l-.438 2.89h-2.328v7.005C18.343 21.128 22 16.991 22 12z"/></svg></a>
+                <a href="#" title="Twitter" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                <a href="#" title="LinkedIn" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476z"/></svg></a>
+                <a href="#" title="YouTube" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12z"/></svg></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="publics/js/global.js" defer></script>
+</body>
+</html>
